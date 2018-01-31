@@ -1,0 +1,23 @@
+export interface IBlock {
+    index: number;
+    hash: string;
+    previousHash: string;
+    timestamp: number;
+    data: string;
+}
+
+export class Block implements IBlock { 
+    public index: number;
+    public hash: string;
+    public previousHash: string;
+    public timestamp: number;
+    public data: string;
+
+    constructor(index: number, hash: string, previousHash: string, timestamp: number, data: string) {
+        this.index = index;
+        this.hash = hash;
+        this.previousHash = previousHash;
+        this.timestamp = timestamp;
+        this.data = data;
+    }
+}
